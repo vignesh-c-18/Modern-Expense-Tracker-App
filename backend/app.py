@@ -5,6 +5,9 @@ from routes import expenses_bp
 import os
 
 app = Flask(__name__)
+@app.route('/')
+def home():
+    return {"message": "Flask backend is running!"}
 # Enable CORS for the React frontend
 CORS(app, resources={r"/api/*": {"origins": "*"}})
 
